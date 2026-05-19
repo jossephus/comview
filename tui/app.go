@@ -126,7 +126,7 @@ type diffViewer struct {
 	reviewFile          string
 	editor              *commentEditor
 	binds               Bindings
-	wrapLines          bool
+	wrapLines           bool
 	emptyMessage        string
 	emptyHint           string
 	commandLine         string
