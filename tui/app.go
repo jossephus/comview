@@ -299,6 +299,12 @@ var helpKeybinds = []helpKeybind{
 func (d *diffViewer) SetTerminalColors(colors TerminalColors) {
 	d.terminalColors = colors
 	d.ensureColorScheme()
+	if d.themeName == "" {
+		d.themeName = Themes[0].Name
+	}
+	if d.themeName != Themes[0].Name {
+		return
+	}
 	d.scheme.ApplyTerminalColors(colors)
 	if d.highlighter != nil {
 		d.highlighter.SetColorScheme(d.scheme)
